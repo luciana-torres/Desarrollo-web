@@ -1,0 +1,108 @@
+/* Importación corregida de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+
+/* Reseteo básico universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y fondo base para todo el sitio */
+body {
+    font-family: 'Doppio One', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E3DFCE; /* Fondo general azul claro */
+    color: #1A0905;            /* Texto principal en tono muy oscuro */
+}
+
+/* Estilización de la cabecera */
+.cabecera {
+    display: flex;                  /* Necesario para usar justify-content y align-items */
+    justify-content: space-between; /* Separa el título del menú */
+    align-items: center;            /* Centra verticalmente */
+    background-color:#94B1C8;
+    padding: 20px 40px;            /* Espaciado interno */
+}
+
+/* Estilo del Nombre / Título principal */
+.cabecera h1 {
+    color: #4C050C;                 /* Texto bordó */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Enlaces de navegación */
+.cabecera nav a {
+    color: #4C050C;                 /* Enlaces bordó */
+    text-decoration: none;
+    margin-left: 15px;              /* Espaciado entre enlaces */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.cabecera nav a:hover {
+    color: #1A0905;                 /* Oscurece al pasar el cursor */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Tarjetas y secciones de contenido */
+section {
+    background-color: #E3DFCE;      /* Fondo crema interno */
+    color: #1A0905;                /* Texto oscuro legible */
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #E3DFCE;
+}
+
+section h2{
+    margin-bottom: 15px;
+}
+
+/* Estilo para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto; /* Centra horizontalmente y mantiene los 15px abajo */
+}
+
+/* Estilo del pie de página */
+/* Estilo general del pie de página */
+footer{
+    background-color: #1A0905;      /* Fondo oscuro único */
+    color: #E3DFCE;                 /* Texto crema */
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Sección interna de Redes Sociales */
+footer .redes {
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    color: #E3DFCE;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Enlace a GitHub integrado con tu paleta */
+footer a {
+    color: #94B1C8;                 /* Azul claro de la paleta */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Texto de derechos de autor */
+footer .copyright {
+    font-size: 0.9rem;
+    color: #E3DFCE;
+    opacity: 0.8;
+}
