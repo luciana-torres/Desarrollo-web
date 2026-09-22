@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luciana Torres |Portafolio personal</title>
+    <title>Portafolio - Luciana Torres</title>
 
-    <!-- Enlace a archivo CSS externo -->
-  <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header class="cabecera">
-        <h1>
-            TORRES LUCIANA
-        </h1>
+        <h1>TORRES LUCIANA</h1>
 
         <nav>
-            <a href="#">Inicio</a>
-            <a href="pages/sobre-mi.html">Sobre mi</a>
+            <a href="index.html">Inicio</a>
+            <a href="pages/sobre-mi.html">Sobre mí</a>
             <a href="pages/servicios.html">Servicios</a>
             <a href="pages/proyectos.html">Proyectos</a>
             <a href="pages/contacto.html">Contacto</a>
@@ -24,31 +21,29 @@
     </header>
 
     <main>
-
-        <section>
+        <!-- Área: hero -->
+        <section class="seccion-hero">
             <h2>Bienvenido a mi portafolio</h2>
-            <p>Hola, soy Luciana Torres. Estudiante de Ciencias de la Computación. 
-            Me interesa el desarrollo de software, las bases de datos y la resolución de problemas mediante algoritmos.
+            <p>
+                Hola, soy Luciana Torres. Estudiante de Ciencias de la Computación. 
+                Me interesa el desarrollo de software, las bases de datos y la resolución de problemas mediante algoritmos.
             </p>
 
             <figure>
-                <img src="image/presentacion.jpg" alt="yo">
-                <figcaption>Gatito representa mi situacion actual</figcaption>
+                <img src="image/presentacion.jpg" alt="Foto de presentación de Luciana Torres">
+                <figcaption>Gatito representa mi situación actual</figcaption>
             </figure>
         </section>
 
-        <section>
+        <!-- Área: sobre-mi -->
+        <section class="seccion-sobre-mi">
             <h2>Sobre mí</h2>
             <p>
                 Actualmente me encuentro ampliando mis conocimientos en
                 programación y desarrollando proyectos académicos para fortalecer
                 mis habilidades técnicas.
             </p>
-
-        </section>
-
-        <section>
-            <h2>Habilidades</h2>
+            <h3>Habilidades principales</h3>
             <ul>
                 <li>Programación en C</li>
                 <li>Git y GitHub</li>
@@ -56,15 +51,40 @@
             </ul>
         </section>
 
+        <!-- Área: proyectos -->
+        <section class="seccion-proyectos">
+            <h2>Proyectos Destacados</h2>
+            <div class="galeria-proyectos">
+                <article class="tarjeta-proyecto">
+                    <h3>Gestor de Archivos en C</h3>
+                    <p>Proyecto académico enfocado en el manejo de memoria y manipulación de archivos binarios.</p>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <h3>Base de Datos SQL</h3>
+                    <p>Modelado relacional y consultas avanzadas para la gestión de un sistema educativo.</p>
+                </article>
+                <article class="tarjeta-proyecto">
+                    <h3>Portafolio Web Responsive</h3>
+                    <p>Sitio maquetado desde cero implementando metodología Mobile-First, CSS Grid y Flexbox.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Área: contacto -->
+        <section class="seccion-contacto">
+            <h2>Contacto</h2>
+            <p>¿Te interesa colaborar en un proyecto o saber más de mi perfil?</p>
+            <p>Podés ver mis proyectos en GitHub o escribirme a través de las páginas del sitio.</p>
+        </section>
     </main>
 
     <footer>
         <div class="redes">
             <h3>Redes Sociales</h3>
-            <a href="https://github.com/luciana-torres" target="_blank">GitHub</a>
+            <a href="https://github.com/luciana-torres" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
         
-        <p class="copyright">&copy;Copyright 2026 - Luciana Torres</p>
+        <p class="copyright">&copy; Copyright 2026 - Luciana Torres</p>
     </footer>
 </body>
 </html>
