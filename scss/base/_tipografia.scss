@@ -1,0 +1,12 @@
+// ============================================================
+// TIPOGRAFÍA
+// ============================================================
+
+@use "../utilities/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+
+body {
+    font-family: $fuente-principal;
+    line-height: 1.6;
+}

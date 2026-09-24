@@ -1,0 +1,63 @@
+// ============================================================
+// NAVBAR
+// ============================================================
+
+@use "../utilities/variables" as *;
+
+.mi-navbar {
+    background-color: $color-secundario !important;
+    box-shadow: $sombra-navbar;
+
+    .mi-logo {
+        color: $color-primario !important;
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        transition: $transicion-transform;
+
+        &:hover,
+        &:focus {
+            color: $color-texto !important;
+            transform: scale(1.02);
+        }
+    }
+
+    .nav-link {
+        color: $color-primario !important;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: $radio-nav;
+        transition: $transicion-base;
+
+        &:hover,
+        &:focus {
+            color: $color-fondo !important;
+            background-color: $color-primario;
+            outline: none;
+        }
+
+        &:active,
+        &.active {
+            color: $color-fondo !important;
+            background-color: $color-texto;
+        }
+    }
+
+    .mi-toggler {
+        border-color: $color-primario !important;
+    }
+}
+
+// Navbar en tablets y móviles
+@media (max-width: 991px) {
+    .mi-navbar {
+        .navbar-nav {
+            padding-top: $espaciado-md;
+            padding-bottom: 10px;
+        }
+
+        .nav-link {
+            text-align: center;
+        }
+    }
+}

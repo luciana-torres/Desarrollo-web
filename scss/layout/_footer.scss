@@ -1,0 +1,43 @@
+// ============================================================
+// FOOTER
+// ============================================================
+
+@use "../utilities/variables" as *;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-texto;
+    color: $color-fondo;
+    text-align: center;
+    padding: $espaciado-xl $espaciado-lg;
+    margin-top: 40px;
+    gap: $espaciado-md;
+
+    h3 {
+        color: inherit;
+        font-size: 1.1rem;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        color: inherit;
+        opacity: 0.8;
+    }
+}
+
+.link-footer {
+    color: $color-secundario;
+    text-decoration: none;
+    font-weight: 600;
+    padding: $espaciado-xs $espaciado-sm;
+    border-radius: $radio-pequeno;
+    transition: $transicion-base;
+
+    &:hover,
+    &:focus {
+        color: $color-fondo;
+        background-color: rgba(148, 177, 200, 0.2);
+    }
+}

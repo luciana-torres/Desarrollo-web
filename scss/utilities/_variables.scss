@@ -1,0 +1,48 @@
+// ============================================================
+// VARIABLES
+// ============================================================
+
+// Colores principales
+$color-fondo: #E3DFCE;
+$color-texto: #1A0905;
+$color-primario: #4C050C;
+$color-secundario: #94B1C8;
+
+// Colores de superficies
+$color-superficie: #f4f2e9;
+$color-borde: #d4ceb8;
+
+// Colores auxiliares
+$color-blanco: #fff;
+$color-negro: #000;
+$color-gris: #555;
+
+// Sombras
+$sombra-navbar: 0 2px 5px rgba(0, 0, 0, 0.1);
+$sombra-card: 0 6px 12px rgba(0, 0, 0, 0.1);
+$sombra-boton: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+// Bordes
+$radio-borde: 8px;
+$radio-pequeno: 4px;
+$radio-nav: 6px;
+
+// Transiciones
+$transicion-base: all 0.3s ease;
+$transicion-color: color 0.3s ease;
+$transicion-transform: transform 0.3s ease, color 0.3s ease;
+
+// Tipografía
+$fuente-principal: 'Doppio One', Tahoma, Geneva, Verdana, sans-serif;
+
+// Espaciados
+$espaciado-xs: 4px;
+$espaciado-sm: 8px;
+$espaciado-md: 15px;
+$espaciado-lg: 20px;
+$espaciado-xl: 30px;
+
+// Contenedores
+$ancho-proyectos: 1100px;
+$ancho-servicios: 1200px;
+$ancho-contenido: 1200px;

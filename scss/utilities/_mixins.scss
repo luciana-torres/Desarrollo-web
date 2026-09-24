@@ -1,0 +1,29 @@
+@use "variables" as *;
+// ============================================================
+// MIXINS
+// ============================================================
+
+@mixin tarjeta-base {
+    background-color: $color-superficie;
+    color: $color-texto;
+    border: 1px solid $color-borde;
+    border-radius: $radio-borde;
+}
+
+@mixin efecto-elevacion {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $sombra-card;
+    }
+}
+
+@mixin foco-sin-outline {
+    outline: none;
+}
+
+@mixin contenedor-centrado($max-width) {
+    max-width: $max-width;
+    margin: 0 auto;
+}

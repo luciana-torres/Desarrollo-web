@@ -1,0 +1,27 @@
+// ============================================================
+// CAROUSEL
+// ============================================================
+
+@use "../utilities/variables" as *;
+
+.carousel-inner {
+    background-color: $color-superficie;
+    border: 1px solid $color-borde;
+}
+
+.img-carousel {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.caption-custom {
+    background-color: rgba(26, 9, 5, 0.75);
+    border-radius: $radio-borde;
+    padding: 10px;
+}
+
+.carousel-indicators {
+    [data-bs-target] {
+        background-color: $color-primario;
+    }
+}

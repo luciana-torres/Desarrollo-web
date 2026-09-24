@@ -1,0 +1,149 @@
+// ============================================================
+// MAIN / ESTRUCTURA DE PÁGINAS
+// ============================================================
+
+@use "../utilities/variables" as *;
+
+// ------------------------------------------------------------
+// Página de inicio
+// ------------------------------------------------------------
+
+main.main-inicio {
+    padding: $espaciado-lg;
+    display: grid;
+    gap: $espaciado-lg;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "hero"
+        "sobre-mi"
+        "proyectos"
+        "contacto";
+}
+
+.seccion-hero {
+    grid-area: hero;
+}
+
+.seccion-sobre-mi {
+    grid-area: sobre-mi;
+}
+
+.seccion-proyectos {
+    grid-area: proyectos;
+}
+
+.seccion-contacto {
+    grid-area: contacto;
+}
+
+// ------------------------------------------------------------
+// Enlaces de contacto
+// ------------------------------------------------------------
+
+.link-contacto {
+    color: $color-primario;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+        color: $color-secundario;
+        outline: none;
+    }
+
+    &:active {
+        color: $color-texto;
+    }
+}
+
+// ------------------------------------------------------------
+// Página de proyectos
+// ------------------------------------------------------------
+
+.main-proyectos {
+    padding: $espaciado-lg;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    max-width: $ancho-proyectos;
+    margin: 0 auto;
+}
+
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $espaciado-lg;
+    width: 100%;
+}
+
+// ------------------------------------------------------------
+// Página de servicios
+// ------------------------------------------------------------
+
+.main-servicios {
+    max-width: $ancho-servicios;
+    margin: 0 auto;
+}
+
+.seccion-intro-servicios {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+
+    h1 {
+        color: $color-primario;
+    }
+
+    p {
+        max-width: 750px;
+    }
+}
+
+// ------------------------------------------------------------
+// Responsive desktop
+// ------------------------------------------------------------
+
+@media (min-width: 1024px) {
+
+    main.main-inicio {
+        grid-template-columns: 2fr 1fr;
+
+        grid-template-areas:
+            "hero hero"
+            "sobre-mi contacto"
+            "proyectos proyectos";
+
+        gap: $espaciado-xl;
+
+        max-width: $ancho-contenido;
+        margin: 0 auto;
+    }
+
+    .galeria-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    main.main-inicio {
+        section {
+            text-align: left;
+            align-items: flex-start;
+        }
+    }
+}
+
+// ------------------------------------------------------------
+// Responsive servicios
+// ------------------------------------------------------------
+
+@media (max-width: 767px) {
+    .main-servicios {
+        padding-left: $espaciado-lg;
+        padding-right: $espaciado-lg;
+    }
+}

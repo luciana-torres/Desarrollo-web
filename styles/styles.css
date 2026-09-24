@@ -1,371 +1,320 @@
-/* Importación de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Doppio+One&display=swap");
+body {
+  font-family: "Doppio One", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
 
-/* ==========================================================================
-   1. RESETEO Y ESTILOS BASE (MOBILE FIRST)
-   ========================================================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Doppio One', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #E3DFCE;
-    color: #1A0905;
-    line-height: 1.6;
+  background-color: #E3DFCE;
+  color: #1A0905;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
-
-/* ==========================================================================
-   2. PERSONALIZACIÓN DE BOOTSTRAP Y ESTADOS INTERACTIVOS
-   ========================================================================== */
-
-/* Navbar Custom */
-.mi-navbar {
-    background-color: #94B1C8 !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.mi-logo {
-    color: #4C050C !important;
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.mi-logo:hover, 
-.mi-logo:focus {
-    color: #1A0905 !important;
-    transform: scale(1.02);
-}
-
-.mi-navbar .nav-link {
-    color: #4C050C !important;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.mi-navbar .nav-link:hover,
-.mi-navbar .nav-link:focus {
-    color: #E3DFCE !important;
-    background-color: #4C050C;
-    outline: none;
-}
-
-.mi-navbar .nav-link:active,
-.mi-navbar .nav-link.active {
-    color: #E3DFCE !important;
-    background-color: #1A0905;
-}
-
-.mi-toggler {
-    border-color: #4C050C !important;
-}
-
-/* Botones */
-.btn-mi-estilo {
-    background-color: #4C050C;
-    color: #E3DFCE;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-mi-estilo:hover {
-    background-color: #1A0905;
-    color: #E3DFCE;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.btn-mi-estilo:focus {
-    box-shadow: 0 0 0 3px rgba(76, 5, 12, 0.4);
-    outline: none;
-}
-
-.btn-mi-estilo:active {
-    transform: translateY(0);
-    background-color: #000;
-}
-
-/* Carousel Custom */
-.carousel-inner {
-    background-color: #f4f2e9;
-    border: 1px solid #d4ceb8;
-}
-
-.img-carousel {
-    max-height: 400px;
-    object-fit: cover;
-}
-
-.caption-custom {
-    background-color: rgba(26, 9, 5, 0.75);
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.carousel-indicators [data-bs-target] {
-    background-color: #4C050C;
-}
-
-/* ==========================================================================
-   3. LAYOUT INICIO (Aplica SOLO a main.main-inicio)
-   ========================================================================== */
-main.main-inicio {
-    padding: 20px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-        "hero"
-        "sobre-mi"
-        "proyectos"
-        "contacto";
-}
-
-.seccion-hero { grid-area: hero; }
-.seccion-sobre-mi { grid-area: sobre-mi; }
-.seccion-proyectos { grid-area: proyectos; }
-.seccion-contacto { grid-area: contacto; }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f2e9;
-    color: #1A0905;
-    text-align: center;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid #d4ceb8;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f2e9;
+  color: #1A0905;
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #d4ceb8;
+  gap: 15px;
+}
+section h2 {
+  color: #4C050C;
 }
 
-section h2 { color: #4C050C; }
-
-/* Tarjetas Proyectos */
-.tarjeta-proyecto {
-    background-color: #E3DFCE;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #94B1C8;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+header {
+  position: relative;
+  z-index: 1030;
 }
 
-.tarjeta-proyecto:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+.mi-navbar {
+  background-color: #94B1C8 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* ==========================================================================
-   4. LAYOUT PÁGINA DE PROYECTOS
-   ========================================================================== */
-.main-proyectos {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
+.mi-navbar .mi-logo {
+  color: #4C050C !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-
-.galeria-proyectos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
+.mi-navbar .mi-logo:hover, .mi-navbar .mi-logo:focus {
+  color: #1A0905 !important;
+  transform: scale(1.02);
 }
-
-/* ==========================================================================
-   5. PIE DE PÁGINA
-   ========================================================================== */
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1A0905;
-    color: #E3DFCE;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
-    gap: 15px;
+.mi-navbar .nav-link {
+  color: #4C050C !important;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
-
-footer h3 { 
-    color: #E3DFCE; 
-    font-size: 1.1rem; 
+.mi-navbar .nav-link:hover, .mi-navbar .nav-link:focus {
+  color: #E3DFCE !important;
+  background-color: #4C050C;
+  outline: none;
 }
-
-.link-footer {
-    color: #94B1C8;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+.mi-navbar .nav-link:active, .mi-navbar .nav-link.active {
+  color: #E3DFCE !important;
+  background-color: #1A0905;
 }
-
-.link-footer:hover, 
-.link-footer:focus {
-    color: #E3DFCE;
-    background-color: rgba(148, 177, 200, 0.2);
-}
-
-footer .copyright {
-    font-size: 0.9rem;
-    color: #E3DFCE;
-    opacity: 0.8;
-}
-
-/* Enlaces de contacto */
-.link-contacto {
-    color: #4C050C;
-    font-weight: 600;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
-
-.link-contacto:hover,
-.link-contacto:focus {
-    color: #94B1C8;
-    outline: none;
-}
-
-.link-contacto:active {
-    color: #1A0905;
-}
-
-/* ==========================================================================
-   6. PÁGINA DE SERVICIOS
-   ========================================================================== */
-.main-servicios {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.seccion-intro-servicios {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    text-align: center;
-}
-
-.seccion-intro-servicios h1 {
-    color: #4C050C;
-}
-
-.seccion-intro-servicios p {
-    max-width: 750px;
-}
-
-/* Tarjetas de Servicios */
-.tarjeta-servicio {
-    background-color: #f4f2e9;
-    color: #1A0905;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #d4ceb8;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tarjeta-servicio:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.tarjeta-servicio h2 {
-    color: #4C050C;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.tarjeta-servicio ul {
-    margin-bottom: 0;
-    padding-left: 20px;
-    flex-grow: 1; /* Permite empujar los elementos inferiores (como la figura) al final */
-}
-
-.tarjeta-servicio li {
-    margin-bottom: 8px;
-}
-
-.tarjeta-servicio figure {
-    margin-top: 20px;
-}
-
-.tarjeta-servicio img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-.tarjeta-servicio .figure-caption {
-    color: #555;
-    font-size: 0.85rem;
-}
-
-/* ==========================================================================
-   7. MEDIA QUERIES (DESKTOP & RESPONSIVE)
-   ========================================================================== */
-@media (min-width: 1024px) {
-    main.main-inicio {
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas: 
-            "hero     hero"
-            "sobre-mi contacto"
-            "proyectos proyectos";
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .galeria-proyectos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    main.main-inicio section {
-        text-align: left;
-        align-items: flex-start;
-    }
+.mi-navbar .mi-toggler {
+  border-color: #4C050C !important;
 }
 
 @media (max-width: 991px) {
-    .mi-navbar .navbar-nav {
-        padding-top: 15px;
-        padding-bottom: 10px;
-    }
+  .mi-navbar .navbar-nav {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .mi-navbar .nav-link {
+    text-align: center;
+  }
+}
+main.main-inicio {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hero" "sobre-mi" "proyectos" "contacto";
+}
 
-    .mi-navbar .nav-link {
-        text-align: center;
-    }
+.seccion-hero {
+  grid-area: hero;
+}
+
+.seccion-sobre-mi {
+  grid-area: sobre-mi;
+}
+
+.seccion-proyectos {
+  grid-area: proyectos;
+}
+
+.seccion-contacto {
+  grid-area: contacto;
+}
+
+.link-contacto {
+  color: #4C050C;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.link-contacto:hover, .link-contacto:focus {
+  color: #94B1C8;
+  outline: none;
+}
+.link-contacto:active {
+  color: #1A0905;
+}
+
+.main-proyectos {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.main-servicios {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seccion-intro-servicios {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+.seccion-intro-servicios h1 {
+  color: #4C050C;
+}
+.seccion-intro-servicios p {
+  max-width: 750px;
+}
+
+@media (min-width: 1024px) {
+  main.main-inicio {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "hero hero" "sobre-mi contacto" "proyectos proyectos";
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .galeria-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  main.main-inicio section {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .main-servicios {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1A0905;
+  color: #E3DFCE;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  gap: 15px;
+}
+footer h3 {
+  color: inherit;
+  font-size: 1.1rem;
+}
+footer .copyright {
+  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.link-footer {
+  color: #94B1C8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.link-footer:hover, .link-footer:focus {
+  color: #E3DFCE;
+  background-color: rgba(148, 177, 200, 0.2);
+}
+
+.btn-mi-estilo {
+  background-color: #4C050C;
+  color: #E3DFCE;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-mi-estilo:hover {
+  background-color: #1A0905;
+  color: #E3DFCE;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-mi-estilo:focus {
+  box-shadow: 0 0 0 3px rgba(76, 5, 12, 0.4);
+  outline: none;
+}
+.btn-mi-estilo:active {
+  transform: translateY(0);
+  background-color: #000;
+}
+
+.tarjeta-proyecto {
+  background-color: #E3DFCE;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #94B1C8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-proyecto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-servicio {
+  background-color: #f4f2e9;
+  color: #1A0905;
+  border: 1px solid #d4ceb8;
+  border-radius: 8px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-servicio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.tarjeta-servicio h2 {
+  color: #4C050C;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+.tarjeta-servicio ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+  flex-grow: 1;
+}
+.tarjeta-servicio li {
+  margin-bottom: 8px;
+}
+.tarjeta-servicio figure {
+  margin-top: 20px;
+}
+.tarjeta-servicio img {
+  max-width: 300px;
+}
+.tarjeta-servicio .figure-caption {
+  color: #555;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 767px) {
-    .main-servicios {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .tarjeta-servicio {
-        padding: 20px;
-    }
+  .tarjeta-servicio {
+    padding: 20px;
+  }
 }
+.carousel-inner {
+  background-color: #f4f2e9;
+  border: 1px solid #d4ceb8;
+}
+
+.img-carousel {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.caption-custom {
+  background-color: rgba(26, 9, 5, 0.75);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #4C050C;
+}
+
+/*# sourceMappingURL=styles.css.map */

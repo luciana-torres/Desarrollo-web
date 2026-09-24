@@ -1,0 +1,23 @@
+// ============================================================
+// MAIN SCSS
+// ÚNICO PUNTO DE ENTRADA
+// ============================================================
+
+// Utilities
+@use "utilities/variables";
+@use "utilities/mixins";
+
+// Base
+@use "base/tipografia";
+@use "base/base";
+
+// Layout
+@use "layout/header";
+@use "layout/nav";
+@use "layout/main";
+@use "layout/footer";
+
+// Components
+@use "components/buttons";
+@use "components/cards";
+@use "components/carousel";
