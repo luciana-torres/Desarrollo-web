@@ -15,21 +15,25 @@
     border-radius: $radio-borde;
     border: 1px solid $color-secundario;
 
-    @include efecto-elevacion;
+    @extend %efecto-elevacion; // <-- Cambiado de @include a @extend
 }
 
 // ------------------------------------------------------------
-// Tarjetas de servicios
+// Tarjetas de servicios (Mobile-first)
 // ------------------------------------------------------------
 
 .tarjeta-servicio {
-    @include tarjeta-base;
-
-    padding: 25px;
+    @extend %tarjeta-base;     // <-- Cambiado de @include a @extend
+    padding: $espaciado-lg; 
     display: flex;
     flex-direction: column;
 
-    @include efecto-elevacion;
+    @extend %efecto-elevacion; // <-- Cambiado de @include a @extend
+
+    // Responsive ajustado con mixin con parámetros
+    @include respond-to(tablet) {
+        padding: 25px;
+    }
 
     h2 {
         color: $color-primario;
@@ -52,21 +56,15 @@
     }
 
     img {
-        max-width: 300px;
+        max-width: 100%;
+        
+        @include respond-to(tablet) {
+            max-width: 300px;
+        }
     }
 
     .figure-caption {
         color: $color-gris;
         font-size: 0.85rem;
-    }
-}
-
-// ------------------------------------------------------------
-// Responsive tarjetas de servicios
-// ------------------------------------------------------------
-
-@media (max-width: 767px) {
-    .tarjeta-servicio {
-        padding: $espaciado-lg;
     }
 }

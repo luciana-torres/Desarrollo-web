@@ -1,4 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Doppio+One&display=swap");
+.tarjeta-servicio {
+  background-color: #f4f2e9;
+  color: #1A0905;
+  border: 1px solid #d4ceb8;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-proyecto, .tarjeta-servicio {
+  transition: all 0.3s ease;
+}
+.tarjeta-proyecto:hover, .tarjeta-servicio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-mi-estilo, .btn-secundario {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: none;
+  font-family: "Doppio One", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-mi-estilo:hover, .btn-secundario:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
 body {
   font-family: "Doppio One", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -219,19 +250,11 @@ footer .copyright {
 .btn-mi-estilo {
   background-color: #4C050C;
   color: #E3DFCE;
-  border: none;
-  padding: 10px 20px;
-  font-weight: 600;
   border-radius: 6px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
 }
 .btn-mi-estilo:hover {
   background-color: #1A0905;
   color: #E3DFCE;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .btn-mi-estilo:focus {
   box-shadow: 0 0 0 3px rgba(76, 5, 12, 0.4);
@@ -242,31 +265,31 @@ footer .copyright {
   background-color: #000;
 }
 
+.btn-secundario {
+  background-color: #94B1C8;
+  color: #1A0905;
+}
+.btn-secundario:hover {
+  background-color: rgb(38.2244008715%, 54.9673202614%, 68.2461873638%);
+  color: #fff;
+}
+
 .tarjeta-proyecto {
   background-color: #E3DFCE;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #94B1C8;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.tarjeta-proyecto:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tarjeta-servicio {
-  background-color: #f4f2e9;
-  color: #1A0905;
-  border: 1px solid #d4ceb8;
-  border-radius: 8px;
-  padding: 25px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.tarjeta-servicio:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+@media (min-width: 768px) {
+  .tarjeta-servicio {
+    padding: 25px;
+  }
 }
 .tarjeta-servicio h2 {
   color: #4C050C;
@@ -285,21 +308,33 @@ footer .copyright {
   margin-top: 20px;
 }
 .tarjeta-servicio img {
-  max-width: 300px;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .tarjeta-servicio img {
+    max-width: 300px;
+  }
 }
 .tarjeta-servicio .figure-caption {
   color: #555;
   font-size: 0.85rem;
 }
 
-@media (max-width: 767px) {
-  .tarjeta-servicio {
-    padding: 20px;
+@keyframes relucirCaption {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .carousel-inner {
   background-color: #f4f2e9;
   border: 1px solid #d4ceb8;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .img-carousel {
@@ -311,6 +346,7 @@ footer .copyright {
   background-color: rgba(26, 9, 5, 0.75);
   border-radius: 8px;
   padding: 10px;
+  animation: relucirCaption 0.5s ease-out forwards;
 }
 
 .carousel-indicators [data-bs-target] {

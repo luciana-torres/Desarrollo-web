@@ -3,23 +3,19 @@
 // ============================================================
 
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *; // <-- Agregá esta línea aquí
+@use "sass:color";
 
+// Botón principal aplicando @extend del placeholder base
 .btn-mi-estilo {
+    @extend %btn-base;
     background-color: $color-primario;
     color: $color-fondo;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 600;
     border-radius: $radio-nav;
-    transition: $transicion-base;
-    text-decoration: none;
-    display: inline-block;
 
     &:hover {
         background-color: $color-texto;
         color: $color-fondo;
-        transform: translateY(-2px);
-        box-shadow: $sombra-boton;
     }
 
     &:focus {
@@ -30,5 +26,17 @@
     &:active {
         transform: translateY(0);
         background-color: $color-negro;
+    }
+}
+
+// Variante secundaria demostrando reutilización con @extend
+.btn-secundario {
+    @extend %btn-base;
+    background-color: $color-secundario;
+    color: $color-texto;
+
+    &:hover {
+        background-color: color.adjust($color-secundario, $lightness: -15%);
+        color: $color-blanco;
     }
 }

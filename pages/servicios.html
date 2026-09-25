@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Luciana Torres</title>
 
+    <!-- Librería AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Bootstrap CSS -->
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
@@ -66,8 +69,8 @@
     <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
     <main class="container py-5 main-servicios">
 
-        <!-- Introducción -->
-        <section class="seccion-intro-servicios text-center mb-5">
+        <!-- Introducción con animación fade-down -->
+        <section class="seccion-intro-servicios text-center mb-5" data-aos="fade-down">
             <h1 class="mb-3">Servicios / Habilidades</h1>
             <p class="mx-auto">
                 A lo largo de mi formación he adquirido conocimientos
@@ -77,11 +80,11 @@
             </p>
         </section>
 
-        <!-- Contenedor de Tarjetas -->
+        <!-- Contenedor de Tarjetas con animaciones escalonadas -->
         <div class="row g-4">
 
             <!-- Lenguajes -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <article class="tarjeta-servicio h-100">
                     <h2>Lenguajes</h2>
                     <ul>
@@ -95,7 +98,7 @@
             </div>
 
             <!-- Herramientas -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <article class="tarjeta-servicio h-100">
                     <h2>Herramientas</h2>
                     <ul>
@@ -104,7 +107,7 @@
                         <li>Linux</li>
                     </ul>
 
-                    <figure class="text-center mb-0">
+                    <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="300">
                         <img 
                             src="../image/herramienta.jpg"
                             alt="Logo de GitHub y herramientas de desarrollo"
@@ -118,7 +121,7 @@
             </div>
 
             <!-- Bases de datos -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                 <article class="tarjeta-servicio h-100">
                     <h2>Bases de Datos</h2>
                     <ul>
@@ -155,6 +158,15 @@
     <!-- Bootstrap JS -->
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Inicialización de AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true
+      });
     </script>
 
 </body>

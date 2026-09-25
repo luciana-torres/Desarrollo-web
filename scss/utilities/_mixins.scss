@@ -1,17 +1,21 @@
 @use "variables" as *;
+
 // ============================================================
-// MIXINS
+// PLACEHOLDERS PARA @EXTEND (SCSS Avanzado)
 // ============================================================
 
-@mixin tarjeta-base {
+// Placeholder base para tarjetas y contenedores elevados
+%tarjeta-base {
     background-color: $color-superficie;
     color: $color-texto;
     border: 1px solid $color-borde;
     border-radius: $radio-borde;
+    transition: $transicion-base;
 }
 
-@mixin efecto-elevacion {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+// Placeholder para efectos interactivos sutiles
+%efecto-elevacion {
+    transition: $transicion-base;
 
     &:hover {
         transform: translateY(-4px);
@@ -19,11 +23,59 @@
     }
 }
 
-@mixin foco-sin-outline {
-    outline: none;
+// Placeholder para botones y enlaces interactivos
+%btn-base {
+    display: inline-block;
+    padding: $espaciado-sm $espaciado-md;
+    border-radius: $radio-pequeno;
+    border: none;
+    font-family: $fuente-principal;
+    text-decoration: none;
+    cursor: pointer;
+    transition: $transicion-base;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $sombra-boton;
+    }
 }
 
-@mixin contenedor-centrado($max-width) {
+// ============================================================
+// MIXINS CON PARÁMETROS (SCSS Avanzado)
+// ============================================================
+
+// 1. Mixin con múltiples parámetros y valores por defecto
+@mixin personalizar-tarjeta($padding: $espaciado-lg, $borde-color: $color-borde, $bg: $color-superficie) {
+    background-color: $bg;
+    border: 1px solid $borde-color;
+    padding: $padding;
+}
+
+// 2. Mixin para centrado y ancho máximo dinámico
+@mixin contenedor-centrado($max-width: $ancho-contenido) {
     max-width: $max-width;
     margin: 0 auto;
+    width: 100%;
+}
+
+// 3. Mixin con parámetros para Flexbox dinámico
+@mixin flex-layout($direction: row, $justify: center, $align: center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// 4. Mixin con parámetro para Responsive (Mobile-First)
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (min-width: 768px) { @content; }
+    } @else if $breakpoint == desktop {
+        @media (min-width: 1024px) { @content; }
+    }
+}
+
+@mixin foco-sin-outline {
+    outline: none;
 }
