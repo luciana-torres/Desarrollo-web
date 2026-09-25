@@ -3,43 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Luciana Torres</title>
 
-    <!-- 1. Bootstrap CSS CDN -->
+    <!-- SEO -->
+    <title>Portafolio de Luciana Torres | Estudiante de Ciencias de la Computación</title>
+    <meta name="description" content="Portafolio profesional de Luciana Torres, estudiante de Ciencias de la Computación. Conocé sus habilidades en programación, bases de datos, Git, GitHub y sus proyectos académicos.">
+    <meta name="keywords" content="Luciana Torres, portafolio, Ciencias de la Computación, programación, C, SQL, bases de datos, Git, GitHub, desarrollo web">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Librería AOS (Animate On Scroll) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- 2. CSS Propio -->
+    <!-- Librería AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
 
-    <!-- NAV DE BOOTSTRAP PERSONALIZADO -->
+    <!-- Navegación principal -->
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg mi-navbar">
+        <nav class="navbar navbar-expand-lg mi-navbar" aria-label="Navegación principal">
             <div class="container-fluid px-4">
-                <a class="navbar-brand mi-logo" href="index.html">TORRES LUCIANA</a>
-                <button class="navbar-toggler mi-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <a class="navbar-brand mi-logo" href="index.html">
+                    TORRES LUCIANA
+                </a>
+
+                <button
+                    class="navbar-toggler mi-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                Inicio
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a>
+                            <a class="nav-link" href="pages/sobre-mi.html">
+                                Sobre mí
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                            <a class="nav-link" href="pages/servicios.html">
+                                Servicios
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/proyectos.html">Proyectos</a>
+                            <a class="nav-link" href="pages/proyectos.html">
+                                Proyectos
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                            <a class="nav-link" href="pages/contacto.html">
+                                Contacto
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -48,106 +79,224 @@
     </header>
 
     <main>
-        <!-- Área: hero con animación fade-up -->
+
+        <!-- Presentación principal -->
         <section class="seccion-hero" data-aos="fade-up">
-            <h2>Bienvenido a mi portafolio</h2>
+            <h1>Portafolio de Luciana Torres</h1>
+
             <p>
-                Hola, soy Luciana Torres. Estudiante de Ciencias de la Computación. 
-                Me interesa el desarrollo de software, las bases de datos y la resolución de problemas mediante algoritmos.
+                Soy Luciana Torres, estudiante de Ciencias de la Computación.
+                Me interesa el desarrollo de software, las bases de datos
+                y la resolución de problemas mediante algoritmos.
             </p>
 
             <figure data-aos="zoom-in" data-aos-delay="200">
-                <img src="image/presentacion.jpg" alt="Foto de presentación de Luciana Torres">
-                <figcaption>Gatito representa mi situación actual</figcaption>
+                <img
+                    src="image/foto-presentacion-luciana-torres.jpg"
+                    alt="Presentación del portafolio de Luciana Torres"
+                    loading="lazy">
+
+                <figcaption>
+                    Presentación personal de Luciana Torres.
+                </figcaption>
             </figure>
         </section>
 
-        <!-- Área: sobre-mi con animación fade-right -->
+        <!-- Información personal y habilidades -->
         <section class="seccion-sobre-mi" data-aos="fade-right">
             <h2>Sobre mí</h2>
+
             <p>
                 Actualmente me encuentro ampliando mis conocimientos en
                 programación y desarrollando proyectos académicos para fortalecer
                 mis habilidades técnicas.
             </p>
+
             <h3>Habilidades principales</h3>
+
             <ul>
-                <li data-aos="fade-up" data-aos-delay="100">Programación en C</li>
-                <li data-aos="fade-up" data-aos-delay="200">Git y GitHub</li>
-                <li data-aos="fade-up" data-aos-delay="300">Bases de datos SQL</li>
+                <li data-aos="fade-up" data-aos-delay="100">
+                    Programación en C
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="200">
+                    Git y GitHub
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="300">
+                    Bases de datos SQL
+                </li>
             </ul>
         </section>
 
-        <!-- Área: proyectos con animación fade-left -->
+        <!-- Proyectos destacados -->
         <section class="seccion-proyectos w-100" data-aos="fade-left">
-            <h2>Proyectos Destacados</h2>
-            
-            <div id="carouselProyectosIndex" class="carousel slide w-100 mt-3" data-bs-ride="carousel">
+            <h2>Proyectos destacados</h2>
+
+            <div
+                id="carouselProyectosIndex"
+                class="carousel slide w-100 mt-3"
+                data-bs-ride="carousel"
+                aria-label="Carrusel de proyectos destacados">
+
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselProyectosIndex" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselProyectosIndex" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselProyectosIndex" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselProyectosIndex"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Ver proyecto 1">
+                    </button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#carouselProyectosIndex"
+                        data-bs-slide-to="1"
+                        aria-label="Ver proyecto 2">
+                    </button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#carouselProyectosIndex"
+                        data-bs-slide-to="2"
+                        aria-label="Ver proyecto 3">
+                    </button>
                 </div>
+
                 <div class="carousel-inner rounded shadow-sm">
+
                     <div class="carousel-item active">
                         <article class="tarjeta-proyecto p-4 text-center">
-                            <h3>Gestor de Archivos en C</h3>
-                            <p>Proyecto académico enfocado en el manejo de memoria dinámica y manipulación de archivos binarios.</p>
+                            <h3>Gestor de archivos en C</h3>
+
+                            <p>
+                                Proyecto académico enfocado en el manejo de
+                                memoria dinámica y manipulación de archivos
+                                binarios mediante el lenguaje C.
+                            </p>
                         </article>
                     </div>
+
                     <div class="carousel-item">
                         <article class="tarjeta-proyecto p-4 text-center">
-                            <h3>Base de Datos SQL</h3>
-                            <p>Modelado relacional, normalización y consultas avanzadas para la gestión de un sistema educativo.</p>
+                            <h3>Base de datos SQL</h3>
+
+                            <p>
+                                Proyecto de modelado relacional, normalización
+                                y consultas SQL para la gestión de un sistema
+                                educativo.
+                            </p>
                         </article>
                     </div>
+
                     <div class="carousel-item">
                         <article class="tarjeta-proyecto p-4 text-center">
-                            <h3>Portafolio Web Responsive</h3>
-                            <p>Sitio maquetado desde cero implementando metodología Mobile-First, CSS Grid, Flexbox y Bootstrap 5.</p>
+                            <h3>Portafolio web responsive</h3>
+
+                            <p>
+                                Sitio web desarrollado con metodología
+                                Mobile-First, CSS Grid, Flexbox y Bootstrap 5.
+                            </p>
                         </article>
                     </div>
+
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectosIndex" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
+
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselProyectosIndex"
+                    data-bs-slide="prev"
+                    aria-label="Proyecto anterior">
+
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">
+                        Proyecto anterior
+                    </span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectosIndex" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
+
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselProyectosIndex"
+                    data-bs-slide="next"
+                    aria-label="Proyecto siguiente">
+
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">
+                        Proyecto siguiente
+                    </span>
                 </button>
             </div>
         </section>
 
-        <!-- Área: contacto con animación zoom-in -->
+        <!-- Contacto -->
         <section class="seccion-contacto" data-aos="zoom-in">
             <h2>Contacto</h2>
-            <p>¿Te interesa colaborar en un proyecto o saber más de mi perfil?</p>
-            <p>Podés ver mis proyectos en GitHub o escribirme a través de las páginas del sitio.</p>
-            <a href="pages/contacto.html" class="btn btn-mi-estilo mt-2" data-aos="flip-up" data-aos-delay="200">Ir a Contacto</a>
+
+            <p>
+                ¿Te interesa colaborar en un proyecto o conocer más
+                sobre mi perfil profesional?
+            </p>
+
+            <p>
+                Podés consultar mis proyectos en GitHub o comunicarte
+                conmigo a través de la página de contacto.
+            </p>
+
+            <a
+                href="pages/contacto.html"
+                class="btn btn-mi-estilo mt-2"
+                data-aos="flip-up"
+                data-aos-delay="200">
+                Ir a Contacto
+            </a>
         </section>
+
     </main>
 
+    <!-- Pie de página -->
     <footer>
         <div class="redes">
-            <h3>Redes Sociales</h3>
-            <a href="https://github.com/luciana-torres" target="_blank" rel="noopener noreferrer" class="link-footer">GitHub</a>
+            <h2>Redes sociales</h2>
+
+            <a
+                href="https://github.com/luciana-torres"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-footer"
+                aria-label="Visitar perfil de Luciana Torres en GitHub">
+                GitHub
+            </a>
         </div>
-        
-        <p class="copyright">&copy; Copyright 2026 - Luciana Torres</p>
+
+        <p class="copyright">
+            &copy; 2026 Luciana Torres
+        </p>
     </footer>
 
-    <!-- Bootstrap JS Bundle CDN -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Inicialización de AOS JS -->
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
-      AOS.init({
-        duration: 800,
-        once: true
-      });
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 
 </body>
 </html>
+```

@@ -3,170 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Luciana Torres</title>
+
+    <!-- SEO -->
+    <title>Habilidades técnicas | Luciana Torres - Programación y Bases de Datos</title>
+    <meta name="description" content="Conocé las habilidades técnicas de Luciana Torres en programación, C, Python, Haskell, SQL, bases de datos, Git, GitHub, Linux y herramientas de desarrollo.">
+    <meta name="keywords" content="Luciana Torres, habilidades técnicas, programación, C, Python, Haskell, SQL, PostgreSQL, bases de datos, Git, GitHub, Linux">
 
     <!-- Librería AOS (Animate On Scroll) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
     <!-- Bootstrap CSS -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
     <!-- CSS propio -->
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
 
-    <!-- ==================== NAVBAR ==================== -->
+    <!-- Navegación principal -->
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg mi-navbar">
+        <nav class="navbar navbar-expand-lg mi-navbar" aria-label="Navegación principal">
             <div class="container">
 
                 <a class="navbar-brand mi-logo" href="../index.html">
                     TORRES LUCIANA
                 </a>
 
-                <button 
+                <button
                     class="navbar-toggler mi-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNavServicios"
                     aria-controls="navbarNavServicios"
                     aria-expanded="false"
-                    aria-label="Abrir menú"
+                    aria-label="Abrir menú de navegación"
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div 
+                <div
                     class="collapse navbar-collapse justify-content-end"
                     id="navbarNavServicios"
                 >
                     <ul class="navbar-nav gap-2">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Inicio</a>
+                            <a class="nav-link" href="../index.html">
+                                Inicio
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+                            <a class="nav-link" href="sobre-mi.html">
+                                Sobre mí
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="servicios.html"
+                            >
+                                Habilidades
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                            <a class="nav-link" href="proyectos.html">
+                                Proyectos
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="contacto.html">
+                                Contacto
+                            </a>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <!-- Contenido principal -->
     <main class="container py-5 main-servicios">
 
-        <!-- Introducción con animación fade-down -->
-        <section class="seccion-intro-servicios text-center mb-5" data-aos="fade-down">
-            <h1 class="mb-3">Servicios / Habilidades</h1>
+        <!-- Presentación de habilidades -->
+        <section
+            class="seccion-intro-servicios text-center mb-5"
+            data-aos="fade-down"
+        >
+            <h1 class="mb-3">
+                Habilidades técnicas
+            </h1>
+
             <p class="mx-auto">
-                A lo largo de mi formación he adquirido conocimientos
-                en diferentes áreas de la programación. Estas son algunas
+                A lo largo de mi formación en Ciencias de la Computación
+                he adquirido conocimientos en diferentes áreas de la
+                programación y el desarrollo de software. Estas son algunas
                 de las tecnologías y herramientas con las que he trabajado
                 y continúo aprendiendo.
             </p>
         </section>
 
-        <!-- Contenedor de Tarjetas con animaciones escalonadas -->
-        <div class="row g-4">
+        <!-- Habilidades técnicas -->
+        <section aria-labelledby="titulo-habilidades">
 
-            <!-- Lenguajes -->
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <article class="tarjeta-servicio h-100">
-                    <h2>Lenguajes</h2>
-                    <ul>
-                        <li>C</li>
-                        <li>Python (nivel básico)</li>
-                        <li>Haskell</li>
-                        <li>SQL (nivel básico)</li>
-                        <li>Pandas (nivel básico)</li>
-                    </ul>
-                </article>
-            </div>
+            <h2 id="titulo-habilidades" class="visually-hidden">
+                Tecnologías y herramientas
+            </h2>
 
-            <!-- Herramientas -->
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <article class="tarjeta-servicio h-100">
-                    <h2>Herramientas</h2>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>GitHub y Git</li>
-                        <li>Linux</li>
-                    </ul>
+            <div class="row g-4">
 
-                    <figure class="text-center mb-0" data-aos="zoom-in" data-aos-delay="300">
-                        <img 
-                            src="../image/herramienta.jpg"
-                            alt="Logo de GitHub y herramientas de desarrollo"
-                            class="img-fluid rounded mx-auto"
+                <!-- Lenguajes de programación -->
+                <div
+                    class="col-12 col-md-6 col-lg-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <article class="tarjeta-servicio h-100">
+
+                        <h2>
+                            Lenguajes de programación
+                        </h2>
+
+                        <ul>
+                            <li>Programación en C</li>
+                            <li>Python básico</li>
+                            <li>Haskell</li>
+                            <li>SQL básico</li>
+                            <li>Pandas básico</li>
+                        </ul>
+
+                    </article>
+                </div>
+
+                <!-- Herramientas de desarrollo -->
+                <div
+                    class="col-12 col-md-6 col-lg-4"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+                    <article class="tarjeta-servicio h-100">
+
+                        <h2>
+                            Herramientas de desarrollo
+                        </h2>
+
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>Git y GitHub</li>
+                            <li>Linux</li>
+                        </ul>
+
+                        <figure
+                            class="text-center mb-0"
+                            data-aos="zoom-in"
+                            data-aos-delay="300"
                         >
-                        <figcaption class="figure-caption mt-2">
-                            Herramientas utilizadas para desarrollar y subir mis proyectos.
-                        </figcaption>
-                    </figure>
-                </article>
+                            <img
+                                src="../image/herramientas-desarrollo-git-github.jpg"
+                                alt="Herramientas de desarrollo Git y GitHub utilizadas en proyectos de programación"
+                                class="img-fluid rounded mx-auto"
+                                loading="lazy"
+                            >
+
+                            <figcaption class="figure-caption mt-2">
+                                Herramientas utilizadas para desarrollar,
+                                gestionar y publicar proyectos de programación.
+                            </figcaption>
+                        </figure>
+
+                    </article>
+                </div>
+
+                <!-- Bases de datos -->
+                <div
+                    class="col-12 col-md-6 col-lg-4"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                >
+                    <article class="tarjeta-servicio h-100">
+
+                        <h2>
+                            Bases de datos
+                        </h2>
+
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>Modelado de bases de datos relacionales</li>
+                            <li>Consultas SQL</li>
+                        </ul>
+
+                    </article>
+                </div>
+
             </div>
 
-            <!-- Bases de datos -->
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <article class="tarjeta-servicio h-100">
-                    <h2>Bases de Datos</h2>
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>Modelado de bases de datos relacionales</li>
-                        <li>Consultas SQL</li>
-                    </ul>
-                </article>
-            </div>
-
-        </div>
+        </section>
 
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Pie de página -->
     <footer class="mt-5">
+
         <div class="redes text-center">
-            <h3>Redes Sociales</h3>
-            <a 
+
+            <h2>
+                Redes sociales
+            </h2>
+
+            <a
                 href="https://github.com/luciana-torres"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link-footer"
+                aria-label="Visitar perfil de Luciana Torres en GitHub"
             >
                 GitHub
             </a>
+
         </div>
 
         <p class="copyright text-center mb-0">
-            &copy; Copyright 2026 - Luciana Torres
+            &copy; 2026 Luciana Torres
         </p>
+
     </footer>
 
     <!-- Bootstrap JS -->
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
-    <!-- Inicialización de AOS JS -->
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
-      AOS.init({
-        duration: 800,
-        once: true
-      });
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 
 </body>
